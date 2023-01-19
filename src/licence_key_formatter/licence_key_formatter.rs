@@ -14,7 +14,7 @@ impl Solution {
     pub fn license_key_formatting(s: String, k: i32) -> String {
         let mut result = "".to_string();
         let mut c_count = 0;
-        for (i, c) in s.chars().rev().enumerate() {     
+        for c in s.chars().rev() {     
             let is_dash = c == '-';
             let needs_dash = (c_count) % k == 0 && !is_dash && c_count != 0;
 
